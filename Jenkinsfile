@@ -3,6 +3,8 @@ buildNPM {
   npmDeploy = 'no'
   runLint = true
   runSonarqube = true
-  runTest = true
-  runTestOptions = '--karma.singleRun --karma.browsers ChromeDocker --karma.reporters mocha junit --coverage'
+  runScripts = [
+   ['formatjs-compile': ''],
+   ['test':'--karma.singleRun --karma.browsers ChromeDocker --karma.reporters mocha junit --coverage'],
+  ]
 }
