@@ -7,34 +7,32 @@ import {
 import { createMemoryHistory } from 'history';
 import { FormattedMessage } from 'react-intl';
 
-import '../../test/jest/__mock__';
-import Settings from './general-settings';
+import '../../../test/jest/__mock__';
+import NewAppGreeting from './new-app-greeting';
 
-const label = <FormattedMessage id="ui-__packageName__.settings.general" />;
+const label = <FormattedMessage id="ui-__packageName__.new-app.greeting" />;
 
-const renderSettingsPage = () => {
+const renderGreetingPage = () => {
   const history = createMemoryHistory();
   return render(
     <Router history={history}>
-      <Settings
-        label={label}
-      />
+      <NewAppGreeting/>
     </Router>
   );
 };
 
-describe('General Settings Page', () => {
+describe('Greeting Page', () => {
   let page;
 
   beforeEach(() => {
-    page = renderSettingsPage();
+    page = renderGreetingPage();
   });
 
   afterEach(cleanup);
 
   it('should be rendered', () => {
     const { container } = page;
-    const content = container.querySelector('[data-test-application-settings-general-message]');
+    const content = container.querySelector('[data-test-application-greeting]');
     expect(container).toBeVisible();
     expect(content).toBeVisible();
     expect(content.innerHtml).toEqual(label.innerHtml);

@@ -5,39 +5,33 @@ import {
   cleanup,
 } from '@testing-library/react';
 import { createMemoryHistory } from 'history';
-import { FormattedMessage } from 'react-intl';
 
 import '../../test/jest/__mock__';
-import Settings from './general-settings';
+import Application from './application';
 
-const label = <FormattedMessage id="ui-__packageName__.settings.general" />;
-
-const renderSettingsPage = () => {
+const renderApplicationPage = () => {
   const history = createMemoryHistory();
   return render(
     <Router history={history}>
-      <Settings
-        label={label}
-      />
+      <Application match={{"path": "example-page"}}/>
     </Router>
   );
 };
 
-describe('General Settings Page', () => {
+describe('Application Page', () => {
   let page;
 
   beforeEach(() => {
-    page = renderSettingsPage();
+    page = renderApplicationPage();
   });
 
   afterEach(cleanup);
 
   it('should be rendered', () => {
     const { container } = page;
-    const content = container.querySelector('[data-test-application-settings-general-message]');
+    const content = container.querySelector('[data-test-application-examples]');
     expect(container).toBeVisible();
     expect(content).toBeVisible();
-    expect(content.innerHtml).toEqual(label.innerHtml);
   });
 
 });
