@@ -46,10 +46,12 @@ jest.mock('@folio/stripes/components', () => ({
   // is there a better way to throw it away? If we don't destructure and
   // instead access props.label and props.children, then we get a test
   // failure that the modal isn't visible. oy, dismissible.
-  Modal: jest.fn(({ children, label, dismissible, ...rest }) => {
+  Modal: jest.fn(({ children, label, dismissible, closeOnBackgroundClick, ...rest }) => {
     return (
+      /* eslint-disable-next-line */
       <div
         data-test={dismissible ? '' : ''}
+        onClick={closeOnBackgroundClick ? jest.fn() : undefined}
         {...rest}
       >
         <h1>{label}</h1>
@@ -84,9 +86,9 @@ jest.mock('@folio/stripes/components', () => ({
   NavListSection: jest.fn(({ children, className, ...rest }) => (
     <div className={className} {...rest}>{children}</div>
   )),
-  Pane: jest.fn(({ children, className, defaultWidth, paneTitle, firstMenu, lastMenu, ...rest }) => {
+  Pane: jest.fn(({ children, className, defaultWidth, paneTitle, firstMenu, lastMenu, fluidContentWidth, ...rest }) => {
     return (
-      <div className={className} {...rest} style={{ width: defaultWidth }}>
+      <div className={className} {...rest} style={!fluidContentWidth ? { width: '960px' } : { width: defaultWidth }}>
         <div>
           {firstMenu ?? null}
           {paneTitle}
