@@ -12,7 +12,7 @@ const label = <FormattedMessage id="ui-__packageName__.new-app.greeting" />;
 
 const renderGreetingModal = () => {
   return render(
-    <GreetingModal/>
+    <GreetingModal />
   );
 };
 
@@ -32,5 +32,4 @@ describe('Greeting Modal', () => {
     expect(content).toBeVisible();
     expect(content.innerHtml).toEqual(label.innerHtml);
   });
-
 });

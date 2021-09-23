@@ -39,5 +39,4 @@ describe('Some Feature Settings Page', () => {
     expect(content).toBeVisible();
     expect(content.innerHtml).toEqual(label.innerHtml);
   });
-
 });

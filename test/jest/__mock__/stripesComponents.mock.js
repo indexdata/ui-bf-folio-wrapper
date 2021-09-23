@@ -96,6 +96,13 @@ jest.mock('@folio/stripes/components', () => ({
       </div>
     );
   }),
+  Paneset: jest.fn(({ children, defaultWidth, ...rest }) => {
+    return (
+      <div {...rest} style={{ width: defaultWidth }}>
+        {children}
+      </div>
+    );
+  }),
   PaneFooter: jest.fn(({ ref, children, ...rest }) => (
     <div ref={ref} {...rest}>{children}</div>
   )),
@@ -108,13 +115,6 @@ jest.mock('@folio/stripes/components', () => ({
   )),
   PaneBackLink: jest.fn(() => <span />),
   PaneMenu: jest.fn((props) => <div>{props.children}</div>),
-  Paneset: jest.fn(({ children, defaultWidth, ...rest }) => {
-    return (
-      <div {...rest} style={{ width: defaultWidth }}>
-        {children}
-      </div>
-    );
-  }),
   RadioButton: jest.fn(({ label, name, ...rest }) => (
     <div>
       <label htmlFor="male">{label}</label>

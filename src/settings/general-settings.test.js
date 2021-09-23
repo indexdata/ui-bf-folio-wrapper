@@ -39,5 +39,4 @@ describe('General Settings Page', () => {
     expect(content).toBeVisible();
     expect(content.innerHtml).toEqual(label.innerHtml);
   });
-
 });

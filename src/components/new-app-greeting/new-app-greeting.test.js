@@ -16,7 +16,7 @@ const renderGreetingPage = () => {
   const history = createMemoryHistory();
   return render(
     <Router history={history}>
-      <NewAppGreeting/>
+      <NewAppGreeting />
     </Router>
   );
 };
@@ -37,5 +37,4 @@ describe('Greeting Page', () => {
     expect(content).toBeVisible();
     expect(content.innerHtml).toEqual(label.innerHtml);
   });
-
 });

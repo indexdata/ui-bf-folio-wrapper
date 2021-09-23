@@ -13,7 +13,7 @@ const renderApplicationPage = () => {
   const history = createMemoryHistory();
   return render(
     <Router history={history}>
-      <Application match={{"path": "example-page"}}/>
+      <Application match={{ 'path': 'example-page' }} />
     </Router>
   );
 };
@@ -33,5 +33,4 @@ describe('Application Page', () => {
     expect(container).toBeVisible();
     expect(content).toBeVisible();
   });
-
 });
