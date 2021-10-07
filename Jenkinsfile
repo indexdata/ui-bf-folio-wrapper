@@ -5,6 +5,6 @@ buildNPM {
   runSonarqube = true
   runScripts = [
    ['formatjs-compile': ''],
-   ['test':'--karma.singleRun --karma.browsers ChromeDocker --karma.reporters mocha junit --coverage'],
+   ['test':'--ci --coverage --colors'],
   ]
 }
