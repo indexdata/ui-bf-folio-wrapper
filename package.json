@@ -11,6 +11,7 @@
   "scripts": {
     "start": "stripes serve",
     "build": "stripes build --output ./output",
+    "build-mod-descriptor": "stripes mod descriptor --full --strict | jq '.[]' > module-descriptor.json ",
     "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/ui-__packageName__ ./translations/ui-__packageName__/compiled",
     "lint": "eslint .",
     "test": "jest"
