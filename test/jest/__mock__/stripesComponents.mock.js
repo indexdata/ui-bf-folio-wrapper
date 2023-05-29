@@ -48,7 +48,7 @@ jest.mock('@folio/stripes/components', () => ({
   // failure that the modal isn't visible. oy, dismissible.
   Modal: jest.fn(({ children, label, dismissible, closeOnBackgroundClick, ...rest }) => {
     return (
-      /* eslint-disable-next-line */
+      
       <div
         data-test={dismissible ? '' : ''}
         onClick={closeOnBackgroundClick ? jest.fn() : undefined}

@@ -1,7 +1,7 @@
 {
-  "name": "@folio/__packageName__",
+  "name": "@folio/marva",
   "version": "1.1.0",
-  "description": "__appDescription__",
+  "description": "Marva",
   "main": "src/index.js",
   "repository": "",
   "license": "Apache-2.0",
@@ -12,7 +12,7 @@
     "start": "stripes serve",
     "build": "stripes build --output ./output",
     "build-mod-descriptor": "stripes mod descriptor --full --strict | jq '.[]' > module-descriptor.json ",
-    "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/ui-__packageName__ ./translations/ui-__packageName__/compiled",
+    "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/ui-marva ./translations/ui-marva/compiled",
     "lint": "eslint .",
     "test": "jest"
   },
@@ -26,7 +26,7 @@
     "@babel/preset-react": "^7.9.0",
     "@folio/eslint-config-stripes": "^6.0.0",
     "@folio/stripes": "^7.0.0",
-    "@folio/stripes-cli": "^__cliVersion__ || ^2.4.0",
+    "@folio/stripes-cli": "^2.6.0 || ^2.4.0",
     "@folio/stripes-core": "^8.0.0",
     "@formatjs/cli": "^4.2.29",
     "@jest/globals": "^26.6.2",
@@ -53,7 +53,9 @@
     "regenerator-runtime": "^0.13.3"
   },
   "dependencies": {
-    "prop-types": "^15.6.0"
+    "antd": "^5.4.6",
+    "prop-types": "^15.6.0",
+    "save": "^2.9.0"
   },
   "peerDependencies": {
     "@folio/stripes": "^7.0.0",
@@ -67,18 +69,18 @@
       "app",
       "settings"
     ],
-    "displayName": "ui-__packageName__.meta.title",
-    "route": "/__appRoute__",
+    "displayName": "Marva Editor",
+    "route": "/marva",
     "okapiInterfaces": {},
     "permissionSets": [
       {
-        "permissionName": "module.__appName__.enabled",
-        "displayName": "UI: __displayName__ module is enabled",
+        "permissionName": "module.marva.enabled",
+        "displayName": "UI: Marva module is enabled",
         "visible": true
       },
       {
-        "permissionName": "settings.__appName__.enabled",
-        "displayName": "Settings (__appName__): display list of settings pages",
+        "permissionName": "settings.marva.enabled",
+        "displayName": "Settings (marva): display list of settings pages",
         "subPermissions": [
           "settings.enabled"
         ],

@@ -3,18 +3,12 @@ import 'regenerator-runtime/runtime';
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import Switch from 'react-router-dom/Switch';
-import Route from 'react-router-dom/Route';
-import Application from './routes/application';
-import ExamplePage from './routes/example-page';
+
+import Wrapper from './Wrapper';
+
 import Settings from './settings';
 
-/*
-  STRIPES-NEW-APP
-  This is the main entry point into your new app.
-*/
-
-class __componentName__ extends React.Component {
+class Marva extends React.Component {
   static propTypes = {
     match: PropTypes.object.isRequired,
     showSettings: PropTypes.bool,
@@ -25,8 +19,7 @@ class __componentName__ extends React.Component {
 
   constructor(props) {
     super(props);
-
-    this.connectedExamplePage = props.stripes.connect(ExamplePage);
+    this.connectedApp = props.stripes.connect(Wrapper);
   }
 
   render() {
@@ -40,21 +33,11 @@ class __componentName__ extends React.Component {
     if (showSettings) {
       return <Settings {...this.props} />;
     }
+
     return (
-      <Switch>
-        <Route
-          path={path}
-          exact
-          component={Application}
-        />
-        <Route
-          path={`${path}/examples`}
-          exact
-          component={this.connectedExamplePage}
-        />
-      </Switch>
+      <this.connectedApp {...this.props} />
     );
   }
 }
 
-export default __componentName__;
+export default Marva;

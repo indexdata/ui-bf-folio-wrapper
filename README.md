@@ -1,4 +1,4 @@
-# __uiAppName__
+# ui-marva
 
 Copyright (C) 2021 The Open Library Foundation
 
@@ -6,7 +6,7 @@ This software is distributed under the terms of the Apache License, Version 2.0.
 
 ## Introduction
 
-Congratulations on creating a new Stripes UI app module!  Follow the instructions below to run __uiAppName__ and start your development.
+Congratulations on creating a new Stripes UI app module!  Follow the instructions below to run ui-marva and start your development.
 
 TODO: Modify this README to replace these sections about getting started.
 
@@ -16,7 +16,7 @@ In order to view and log into the platform being served up, a suitable Okapi bac
 
 ## Run your new app
 
-Run the following from the __uiAppName__ directory to serve your new app using a development server:
+Run the following from the ui-marva directory to serve your new app using a development server:
 ```
 stripes serve
 ```
