@@ -1,12 +1,11 @@
-import { App } from 'marva-next';
+import 'marva-next';
 
 const Wrapper = (props) => {
-  // TODO: purge localStorage
+  // TODO: manage & purge localStorage here
 
   return (
     <div id="editor-root" style={{ margin: '1em' }}>
-      <div>Wrapper</div>
-      <App routePrefix="/marva" okapi={props.stripes.okapi} />
+      <marva-next route-prefix="/marva" okapi={JSON.stringify(props.stripes.okapi)} />
     </div>
   );
 };

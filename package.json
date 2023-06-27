@@ -55,6 +55,7 @@
   "dependencies": {
     "antd": "^5.4.6",
     "prop-types": "^15.6.0",
+    "react-select": "^5.7.3",
     "save": "^2.9.0"
   },
   "peerDependencies": {
