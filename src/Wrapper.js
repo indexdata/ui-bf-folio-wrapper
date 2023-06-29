@@ -1,4 +1,5 @@
-import 'marva-next';
+import '@folio-eis/marva-next';
+
 
 const Wrapper = (props) => {
   // TODO: manage & purge localStorage here
