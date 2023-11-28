@@ -78,7 +78,12 @@
       {
         "permissionName": "module.marva.enabled",
         "displayName": "UI: Marva module is enabled",
-        "visible": true
+        "visible": true,
+        "subPermissions": [
+          "linked.data.bibframe.get",
+          "linked.data.bibframe.post",
+          "search.bibframe.collection.get"
+        ]
       },
       {
         "permissionName": "settings.marva.enabled",
