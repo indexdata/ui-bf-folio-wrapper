@@ -1,6 +1,6 @@
 # ui-marva
 
-Copyright (C) 2021 The Open Library Foundation
+© 2024 EBSCO Information Services.
 
 This software is distributed under the terms of the Apache License, Version 2.0. See the file "[LICENSE](LICENSE)" for more information.
 
@@ -9,6 +9,11 @@ This software is distributed under the terms of the Apache License, Version 2.0.
 Congratulations on creating a new Stripes UI app module!  Follow the instructions below to run ui-marva and start your development.
 
 TODO: Modify this README to replace these sections about getting started.
+
+## Dependencies
+This module requires the following components to function:
+
+1. [`@folio-eis/marva-next`](https://github.com/FOLIO-EIS/ui-linked-data) (also known as `ui-linked-data`, `marva-next`). This module needs to be built as a library in order for `ui-bf-folio-wrapper` to work. Refer to point 1 from its [Usage: As an embedded application](https://github.com/FOLIO-EIS/ui-linked-data?tab=readme-ov-file#as-an-embedded-application) section on how to do so.
 
 ## Prerequisites
 
