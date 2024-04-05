@@ -36,7 +36,6 @@ module.exports = {
     maxUnpagedResourceCount: 2000,
     showPerms: false,
     preserveConsole: true,
-    useSecureTokens: true,
   },
   modules: {
     '@folio-eis/bf-folio-wrapper': '../ui-bf-folio-wrapper',
