@@ -1,20 +1,26 @@
 # ui-bf-folio-wrapper
 
+## Dependencies
+
+This module requires the following components to function:
+
+1. [`@folio-eis/marva-next`](https://github.com/FOLIO-EIS/ui-linked-data) (also known as `ui-linked-data`, `marva-next`). This module needs to be built as a library in order for `ui-bf-folio-wrapper` to work. Refer to point 1 from its [Usage: As an embedded application](https://github.com/FOLIO-EIS/ui-linked-data?tab=readme-ov-file#as-an-embedded-application) section on how to do so.
+
 ## Prerequisites
 
 ### Install Stripes CLI
 
-- [Install tutorial](https://github.com/folio-org/stripes-cli/blob/master/README.md)
+- [Install guidelines](https://github.com/folio-org/stripes-cli/blob/master/README.md)
 
 ### Link @folio-eis/marva-next package locally
 
-1. Within `@folio-eis/marva-next` repository on your machine, run `yarn link`
+1. From within the `@folio-eis/marva-next` (`ui-linked-data`) repository on your machine, run `yarn link`
 
 ## Run within the Stripes platform
 
 1. Open the terminal and run `stripes workspace`
-2. Select the platform (platform-complete). Select modules if necessary, additional libraries if necessary (stripes-components, stripes-smart-components, etc), plugins if necessary and press Enter.
-3. The folder you ran the `stripes workspace` command in will now contain a folder named `stripes`. Clone the `ui-bf-folio-wrapper` repository into the `stripes` folder.
+2. From the list of options presented to you, select the platform named `platform-complete`. If necessary, select modules, additional libraries, plugins. Press Enter.
+3. If the previous step was successful, the folder you ran the `stripes workspace` command in will now contain a folder named `stripes`. Clone the `ui-bf-folio-wrapper` repository into the `stripes` folder.
 4. From within the `ui-bf-folio-wrapper` folder run `yarn link @folio-eis/marva-next`
 5. Temporarily remove the `"@folio-eis/marva-next": "*"` from the `dependencies` field of `ui-bf-folio-wrapper`'s `package.json`.
 6. From within the `stripes` folder, run `yarn`.
