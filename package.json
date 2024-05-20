@@ -1,6 +1,6 @@
 {
   "name": "@folio-eis/bf-folio-wrapper",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Marva",
   "main": "src/index.js",
   "repository": "",
@@ -54,7 +54,7 @@
   },
   "dependencies": {
     "prop-types": "^15.6.0",
-    "@folio-eis/marva-next": "^1.0.0"
+    "@folio-eis/marva-next": "^1.0.1"
   },
   "resolutions": {
     "favicons-webpack-plugin": "6.0.0"
