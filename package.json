@@ -90,7 +90,8 @@
         "subPermissions": [
           "linked.data.bibframe.get",
           "linked.data.bibframe.post",
-          "search.bibframe.collection.get"
+          "search.linked-data.work.collection.get",
+          "search.linked-data.authority.collection.get"
         ]
       },
       {
